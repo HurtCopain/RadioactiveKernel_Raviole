@@ -510,7 +510,7 @@
 			cal-id = <ACPM_DVFS_CPUCL1>;
 			dm-type = <DM_CPU_CL1>;
 
-			max-freq = <2253000>;
+			max-freq = <2348000>;
 			min-freq = <400000>;
 			resume-freq = <1491000>;
 
