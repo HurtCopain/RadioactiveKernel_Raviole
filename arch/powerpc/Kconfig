@@ -111,9 +111,6 @@ config GENERIC_HWEIGHT
 	bool
 	default y
 
-config PPC
-	bool
-	default y
 	#
 	# Please keep this list sorted alphabetically.
 	#
@@ -146,6 +143,7 @@ config PPC
 	select ARCH_MIGHT_HAVE_PC_SERIO
 	select ARCH_OPTIONAL_KERNEL_RWX		if ARCH_HAS_STRICT_KERNEL_RWX
 	select ARCH_SUPPORTS_ATOMIC_RMW
+    select ARCH_SUPPORTS_RT if HAVE_POSIX_CPU_TIMERS_TASK_WORK
 	select ARCH_USE_BUILTIN_BSWAP
 	select ARCH_USE_CMPXCHG_LOCKREF		if PPC64
 	select ARCH_USE_QUEUED_RWLOCKS		if PPC_QUEUED_SPINLOCKS
@@ -237,6 +235,7 @@ config PPC
 	select HAVE_SYSCALL_TRACEPOINTS
 	select HAVE_VIRT_CPU_ACCOUNTING
 	select HAVE_IRQ_TIME_ACCOUNTING
+    select HAVE_POSIX_CPU_TIMERS_TASK_WORK  if !KVM
 	select HAVE_RSEQ
 	select IOMMU_HELPER			if PPC64
 	select IRQ_DOMAIN
@@ -352,7 +351,7 @@ config PPC_DCR
 	default y
 
 config PPC_OF_PLATFORM_PCI
-	bool
+	boolPPC
 	depends on PCI
 	depends on PPC64 # not supported on 32 bits yet
 
