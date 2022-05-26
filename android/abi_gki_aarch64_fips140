@@ -110,7 +110,6 @@
   queue_work_on
   ___ratelimit
   _raw_spin_lock
-  _raw_spin_unlock
   refcount_warn_saturate
   scatterwalk_ffwd
   scatterwalk_map_and_copy

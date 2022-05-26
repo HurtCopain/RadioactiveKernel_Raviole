@@ -597,7 +597,6 @@
   _raw_spin_lock_bh
   _raw_spin_lock_irq
   _raw_spin_lock_irqsave
-  _raw_spin_unlock
   _raw_spin_unlock_bh
   _raw_spin_unlock_irq
   _raw_spin_unlock_irqrestore

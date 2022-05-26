@@ -194,7 +194,6 @@ _raw_read_unlock
 _raw_read_unlock_irqrestore
 _raw_spin_lock
 _raw_spin_lock_irqsave
-_raw_spin_unlock
 _raw_spin_unlock_irqrestore
 _raw_write_lock
 _raw_write_lock_irqsave
